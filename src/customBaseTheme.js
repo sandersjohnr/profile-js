@@ -8,8 +8,6 @@ import {
 import { fade } from 'material-ui/utils/colorManipulator';
 import spacing from 'material-ui/styles/spacing';
 
-// const amber =
-
 export default {
   spacing: spacing,
   fontFamily: 'Roboto, sans-serif',

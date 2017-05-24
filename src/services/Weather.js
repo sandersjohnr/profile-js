@@ -3,14 +3,8 @@ function fetchWeatherData(cb) {
   const url = `http://api.openweathermap.org/data/2.5/weather?q=Brooklyn&appid=${APIKEY}`;
 
   fetch(url)
-  .then(res => {
-    if (!res.ok) throw new Error('Bad response');
-    return res.json();
-  })
-  .catch(console.log)
+  .then(res => res.json())
   .then(cb);
 }
 
-export default {
-  fetchWeatherData
-}
+export default { fetchWeatherData };

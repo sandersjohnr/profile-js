@@ -1,3 +1,16 @@
 import React from 'react';
 
-export default () => <h3>Home</h3>
+export default class HomePage extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div>
+        <h3>Home</h3>
+      </div>
+    );
+  }
+}

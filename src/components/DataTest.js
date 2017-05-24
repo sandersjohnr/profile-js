@@ -1,16 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Weather from '../services/Weather';
+import PropTypes from 'prop-types';
 
 export default class DataTest extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       data: 'empty'
-    }
+    };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     Weather.fetchWeatherData(data => {
       this.setState({ data });
     });
@@ -20,12 +20,10 @@ export default class DataTest extends Component {
     return (
       <div>
         <h3>DataTest</h3>
-        Data: {JSON.stringify(this.state.data)}
-
+        Data: { JSON.stringify(this.state.data) }
       </div>
     );
   }
-
 }
 
-DataTest.propTypes = Object.assign({});
+DataTest.propTypes = Object.assign({ });
